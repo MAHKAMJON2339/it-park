@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My book</title>
+  <!-- 
+    Mashq: My book
+    Sana: 2025-11-04 10:42:47
+    Turi: playground
+  -->
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuklangan loyiha</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: #4a90e2; color: #fff; padding: 20px 0; text-align: center; }
+        nav { background: #357ab7; padding: 10px 0; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1000px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; }
+        .books { display: flex; flex-wrap: wrap; gap: 20px; }
+        .book { background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; width: 220px; padding: 15px; text-align: center; }
+        .book img { width: 120px; height: 170px; object-fit: cover; margin-bottom: 10px; }
+        .book-title { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+        .book-author { color: #555; margin-bottom: 10px; }
+        .book-price { color: #4a90e2; font-size: 16px; margin-bottom: 10px; }
+        .buy-btn { background: #4a90e2; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+        footer { background: #222; color: #fff; text-align: center; padding: 15px 0; margin-top: 30px; }
+</style>
+
+      <script>
+        (function() {
+          const originalLog = console.log;
+          const originalError = console.error;
+          const originalWarn = console.warn;
+          const originalInfo = console.info;
+          
+          console.log = function(...args) {
+            window.parent.postMessage({ type: 'console', level: 'log', message: args.map(String).join(' ') }, '*');
+            originalLog.apply(console, args);
+          };
+          
+          console.error = function(...args) {
+            window.parent.postMessage({ type: 'console', level: 'error', message: args.map(String).join(' ') }, '*');
+            originalError.apply(console, args);
+          };
+          
+          console.warn = function(...args) {
+            window.parent.postMessage({ type: 'console', level: 'warn', message: args.map(String).join(' ') }, '*');
+            originalWarn.apply(console, args);
+          };
+          
+          console.info = function(...args) {
+            window.parent.postMessage({ type: 'console', level: 'info', message: args.map(String).join(' ') }, '*');
+            originalInfo.apply(console, args);
+          };
+          
+          window.onerror = function(msg, url, line, col, error) {
+            window.parent.postMessage({ 
+              type: 'console', 
+              level: 'error', 
+              message: 'Error: ' + msg + ' at line ' + line 
+            }, '*');
+            return false;
+          };
+        })();
+      </script>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Elektron Kitoblar Sotuvi</h1>
+        <p>Eng yaxshi elektron kitoblarni xarid qiling va o‘qing!</p>
+    </header>
+    <nav>
+        <a href="#">Bosh sahifa</a>
+        <a href="#">Kitoblar</a>
+        <a href="#">Aloqa</a>
+    </nav>
+    <div class="container">
+        <h2>Ommabop kitoblar</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10523338-L.jpg" alt="Kitob 1">
+                <div class="book-title">Alkimyogar</div>
+                <div class="book-author">Paulo Koelo</div>
+                <div class="book-price">25 000 so‘m</div>
+                <button class="buy-btn">Sotib olish</button>
+            </div>
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/11153215-L.jpg" alt="Kitob 2">
+                <div class="book-title">Boy ota, kambag‘al ota</div>
+                <div class="book-author">Robert Kiyosaki</div>
+                <div class="book-price">30 000 so‘m</div>
+                <button class="buy-btn">Sotib olish</button>
+            </div>
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10958358-L.jpg" alt="Kitob 3">
+                <div class="book-title">O‘ylab ko‘r</div>
+                <div class="book-author">Napoleon Hill</div>
+                <div class="book-price">28 000 so‘m</div>
+                <button class="buy-btn">Sotib olish</button>
+            </div>
+            <div class="book">
+                <img src="https://covers.openlibrary.org/b/id/10523339-L.jpg" alt="Kitob 4">
+                <div class="book-title">Sadoqat</div>
+                <div class="book-author">Otabek Mahkam</div>
+                <div class="book-price">20 000 so‘m</div>
+                <button class="buy-btn">Sotib olish</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Elektron Kitoblar Sotuvi. Barcha huquqlar himoyalangan.
+    </footer>
+
+<script>
+const audio = document.getElementById('music1');
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+</script>
+</body>
+</html>
+</body>
+</html>
